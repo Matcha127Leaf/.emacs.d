@@ -9,6 +9,9 @@
 (let ((default-directory "~/.emacs.d/elpa/"))
   (normal-top-level-add-subdirs-to-load-path))
 
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
 (package-initialize) 
 
 
