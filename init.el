@@ -7,13 +7,15 @@
 
 ;;; Add package directory to load path
 (let ((default-directory "~/.emacs.d/elpa/"))
+  (make-directory default-directory :parents))
+
+(let ((default-directory "~/.emacs.d/elpa/"))
   (normal-top-level-add-subdirs-to-load-path))
 
 (when (not package-archive-contents)
   (package-refresh-contents))
 
 (package-initialize) 
-
 
 ;;;; Packages to install 
 (defvar my/packages
@@ -54,6 +56,7 @@
     undo-tree 
     undohist
     yasnippet
+    magit
     )
   "A list of packages to be installed at launch.")
 

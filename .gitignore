@@ -4,3 +4,6 @@ eshell
 .DS_Store
 elpa
 el-get
+server
+ac-comphist.dat
+
